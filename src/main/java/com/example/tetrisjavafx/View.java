@@ -71,7 +71,7 @@ public class View {
         Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/ARCADECLASSIC.TTF"), 40);
         gc.setFont(pixelFont);
         gc.setFill(Color.RED);
-        gc.fillText("GAME OVER", (width + 2) * cellSize / 2 - 15, (height + 2) * cellSize / 2 - 20);
+        gc.fillText("GAME OVER", (width + 2) * cellSize / 2 - 50, (height + 2) * cellSize / 2 - 20);
         gc.setFill(Color.WHITE);
         gc.fillText("Press SPACE to Restart", (width + 2) * cellSize / 2 - 125, (height + 2) * cellSize / 2 + 20);
     }
