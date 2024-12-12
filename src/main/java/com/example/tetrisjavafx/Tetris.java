@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class Tetris extends Application {
     private static final int CELL_SIZE = 30;
-    private static final int WIDTH = 10; // 10 клеток игрового поля + 5 клеток для информации
+    private static final int WIDTH = 10; // ширина поля в клетках
     private static final int HEIGHT = 20; // высота поля в клетках
 
     private Model model;
@@ -20,7 +20,7 @@ public class Tetris extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Настройка Canvas
-        Canvas canvas = new Canvas(WIDTH * CELL_SIZE+5*CELL_SIZE, HEIGHT * CELL_SIZE);
+        Canvas canvas = new Canvas((WIDTH + 8) * CELL_SIZE, (HEIGHT + 2) * CELL_SIZE);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         // Создание модели, представления и контроллера
