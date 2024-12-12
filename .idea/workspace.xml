@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ebc3a776-92c8-44bd-8ff9-567868ecb6d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Tetris.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/View.java" afterDir="false" />
     </list>
@@ -24,11 +26,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -53,6 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Politechnika Bialostocka/KCK/Tetris Lanterna",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

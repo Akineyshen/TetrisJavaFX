@@ -68,12 +68,12 @@ public class View {
     }
 
     public void renderGameOver() {
-        Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/ARCADECLASSIC.TTF"), 40);
+        Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/Pixel Emulator.otf"), 25);
         gc.setFont(pixelFont);
         gc.setFill(Color.RED);
-        gc.fillText("GAME OVER", (width + 2) * cellSize / 2 - 50, (height + 2) * cellSize / 2 - 20);
+        gc.fillText("GAME OVER", (width + 2) * cellSize / 2, (height + 2) * cellSize / 2 - 20);
         gc.setFill(Color.WHITE);
-        gc.fillText("Press SPACE to Restart", (width + 2) * cellSize / 2 - 125, (height + 2) * cellSize / 2 + 20);
+        gc.fillText("Press SPACE to Restart", (width + 2) * cellSize / 2 - 115, (height + 2) * cellSize / 2 + 20);
     }
 
     public void renderNextPiece(char[][] nextPiece) {
@@ -91,11 +91,23 @@ public class View {
 
     public void renderScore(int score) {
         gc.setFill(Color.WHITE);
-        Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/ARCADECLASSIC.TTF"), 20);
+        Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/Pixel Emulator.otf"), 20);
         gc.setFont(pixelFont);
-        gc.fillText("\nScore", (width + 3) * cellSize, 7 * cellSize); // Заголовок "Score"
+        gc.fillText("Score", (width + 3) * cellSize, 6 * cellSize + 5); // Заголовок "Score"
 
-        gc.fillText(String.valueOf(score), (width + 3) * cellSize, 8 * cellSize + 10); // Текущее значение очков
+        gc.fillText(String.valueOf(score), (width + 3) * cellSize, 7 * cellSize - 4); // Текущее значение очков
+    }
+
+    public void renderTimer(String time) {
+        gc.setFill(Color.WHITE);
+        Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/Pixel Emulator.otf"), 20);
+        gc.setFont(pixelFont);
+
+        // Отображаем текст "Time"
+        gc.fillText("Time", (width + 3) * cellSize, 8 * cellSize + 10);
+
+        // Отображаем значение времени
+        gc.fillText(time, (width + 3) * cellSize, 9 * cellSize + 10);
     }
 
     public void clearSidebar() {

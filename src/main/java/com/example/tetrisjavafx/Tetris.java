@@ -27,6 +27,7 @@ public class Tetris extends Application {
         model = new Model(WIDTH, HEIGHT);
         view = new View(gc, CELL_SIZE, WIDTH, HEIGHT);
         controller = new Controller(model, view);
+        controller.resetGame();
 
         // Настройка сцены
         StackPane root = new StackPane(canvas);

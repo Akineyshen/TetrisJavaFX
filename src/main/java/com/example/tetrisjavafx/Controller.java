@@ -43,6 +43,7 @@ public class Controller {
             view.clearSidebar(); // Очищаем боковую панель
             view.renderNextPiece(model.getNextPiece());
             view.renderScore(model.getScore());
+            view.renderTimer(model.getTime());
         }
     }
 
@@ -51,6 +52,7 @@ public class Controller {
         model.resetBoard(); // Очистить игровое поле
         model.spawnPiece(); // Создать новую фигуру
         model.resetScore();
+        model.startTimer();
         model.gameOver = false; // Сбросить флаг окончания игры
         render(); // Обновить отображение
     }

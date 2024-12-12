@@ -1,6 +1,7 @@
 package com.example.tetrisjavafx;
 
 import java.util.Random;
+import java.util.Timer;
 
 public class Model {
     private final int width;
@@ -10,9 +11,9 @@ public class Model {
     private char[][] currentPiece;
     private int pieceX, pieceY;
     private int score = 0;
-    private char[][] nextPiece; // Следующая фигура
-
-
+    private char[][] nextPiece;
+    private long startTime;
+    private long endTime = 0;
     private final Random random;
 
     public Model(int width, int height) {
@@ -24,6 +25,7 @@ public class Model {
         resetBoard();
         nextPiece = generateRandomPiece();
         spawnPiece();
+
     }
 
     public void resetBoard() {
@@ -65,6 +67,7 @@ public class Model {
         // Если фигура не может появиться, игра заканчивается
         if (!canMove(pieceX, pieceY, currentPiece)) {
             gameOver = true;
+            stopTimer();
         }
     }
 
@@ -225,5 +228,26 @@ public class Model {
         }
     }
 
+    public void startTimer() {
+        startTime = System.currentTimeMillis();
+        endTime = 0;
+    }
+
+    public void stopTimer() {
+        if (endTime == 0) {
+            endTime = System.currentTimeMillis();
+        }
+    }
+
+    public String getTime() {
+
+        long elapsedTime = gameOver ? endTime - startTime : System.currentTimeMillis() - startTime;
+
+        long totalSeconds = elapsedTime / 1000;
+        long minutes = totalSeconds / 60;
+        long seconds = totalSeconds % 60;
+
+        return String.format("%02d/%02d", minutes, seconds);
+    }
 
 }
