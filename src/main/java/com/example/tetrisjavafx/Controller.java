@@ -39,9 +39,9 @@ public class Controller {
         if (model.isGameOver()) {
             view.renderGameOver();
         } else {
-            view.renderBoard(model.getBoard(), model.getCurrentPiece(), model.getPieceX(), model.getPieceY());
+            view.renderBoard(model.getBoardColors(), model.getCurrentPiece(), model.getPieceX(), model.getPieceY(), model.getCurrentPieceColor());
             view.clearSidebar(); // Очищаем боковую панель
-            view.renderNextPiece(model.getNextPiece());
+            view.renderNextPiece(model.getNextPiece(), model.getNextPieceColor());
             view.renderScore(model.getScore());
             view.renderTimer(model.getTime());
         }

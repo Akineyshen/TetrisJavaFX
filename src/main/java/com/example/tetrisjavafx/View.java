@@ -18,7 +18,7 @@ public class View {
         this.height = height;
     }
 
-    public void renderBoard(char[][] board, char[][] piece, int pieceX, int pieceY) {
+    public void renderBoard(Color[][] boardColors, char[][] piece, int pieceX, int pieceY, Color pieceColor) {
         gc.setFill(Color.BLACK);
         gc.fillRect(0, 0, (width + 5) * cellSize, (height + 2) * cellSize);
 
@@ -32,10 +32,10 @@ public class View {
         }
 
         // Рисуем игровое поле
-        for (int y = 0; y < board.length; y++) {
-            for (int x = 0; x < board[y].length; x++) {
-                if (board[y][x] != ' ') {
-                    drawCell(x + 1, y + 1, Color.GRAY); // Смещение на 1 клетку из-за рамки
+        for (int y = 0; y < boardColors.length; y++) {
+            for (int x = 0; x < boardColors[y].length; x++) {
+                if (boardColors[y][x] != Color.BLACK) {
+                    drawCell(x + 1, y + 1, boardColors[y][x]); // Смещение на 1 клетку из-за рамки
                 }
             }
         }
@@ -54,7 +54,7 @@ public class View {
         for (int y = 0; y < piece.length; y++) {
             for (int x = 0; x < piece[y].length; x++) {
                 if (piece[y][x] != ' ') {
-                    drawCell(pieceX + x + 1, pieceY + y + 1, Color.BLUE); // Смещение на 1 клетку
+                    drawCell(pieceX + x + 1, pieceY + y + 1, pieceColor); // Смещение на 1 клетку
                 }
             }
         }
@@ -76,14 +76,14 @@ public class View {
         gc.fillText("Press SPACE to Restart", (width + 2) * cellSize / 2 - 115, (height + 2) * cellSize / 2 + 20);
     }
 
-    public void renderNextPiece(char[][] nextPiece) {
+    public void renderNextPiece(char[][] nextPiece, Color nextPieceColor) {
         gc.setFill(Color.WHITE);
         gc.fillText("Next", (width + 3) * cellSize, 2 * cellSize); // Отображаем текст "Next:"
 
         for (int y = 0; y < nextPiece.length; y++) {
             for (int x = 0; x < nextPiece[y].length; x++) {
                 if (nextPiece[y][x] != ' ') {
-                    drawCell(width + 3 + x, 3 + y, Color.WHITE); // Рисуем фигуру справа от поля
+                    drawCell(width + 3 + x, 3 + y, nextPieceColor); // Рисуем фигуру справа от поля
                 }
             }
         }

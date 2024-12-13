@@ -47,10 +47,15 @@ public class Tetris extends Application {
     private void startGameLoop() {
         new AnimationTimer() {
             private long lastUpdate = 0;
+            private long dropInterval = 500_000_000;
 
             @Override
             public void handle(long now) {
-                if (now - lastUpdate >= 500_000_000) { // Обновление каждые 500 мс
+                int score = model.getScore();
+                dropInterval = 500_000_000 - ((score / 500) * 50_000_000);
+                dropInterval = Math.max(dropInterval, 100_000_000);
+
+                if (now - lastUpdate >= dropInterval) { // Обновление каждые 500 мс
                     controller.update();
                     lastUpdate = now;
                 }
