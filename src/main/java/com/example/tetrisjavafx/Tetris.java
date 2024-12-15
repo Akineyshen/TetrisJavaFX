@@ -10,8 +10,8 @@ import javafx.stage.Stage;
 
 public class Tetris extends Application {
     private static final int CELL_SIZE = 30;
-    private static final int WIDTH = 10; // ширина поля в клетках
-    private static final int HEIGHT = 20; // высота поля в клетках
+    private static final int WIDTH = 10; // width of the field in cells
+    private static final int HEIGHT = 20; // height of the field in cells
 
     private Model model;
     private View view;
@@ -19,17 +19,17 @@ public class Tetris extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        // Настройка Canvas
+        // Create a canvas
         Canvas canvas = new Canvas((WIDTH + 8) * CELL_SIZE, (HEIGHT + 2) * CELL_SIZE);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        // Создание модели, представления и контроллера
+        // Initialize the model, view, and controller
         model = new Model(WIDTH, HEIGHT);
         view = new View(gc, CELL_SIZE, WIDTH, HEIGHT);
         controller = new Controller(model, view);
         controller.resetGame();
 
-        // Настройка сцены
+        // Create a stack pane to center the canvas
         StackPane root = new StackPane(canvas);
         Scene scene = new Scene(root);
         primaryStage.setTitle("Tetris");
@@ -37,10 +37,10 @@ public class Tetris extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
 
-        // Обработка ввода
+        // Set up key event handling
         scene.setOnKeyPressed(controller::handleKeyPress);
 
-        // Запуск игрового цикла
+        // Start the game loop
         startGameLoop();
     }
 
@@ -55,7 +55,7 @@ public class Tetris extends Application {
                 dropInterval = 500_000_000 - ((score / 500) * 50_000_000);
                 dropInterval = Math.max(dropInterval, 100_000_000);
 
-                if (now - lastUpdate >= dropInterval) { // Обновление каждые 500 мс
+                if (now - lastUpdate >= dropInterval) { // Drop the piece every dropInterval nanoseconds
                     controller.update();
                     lastUpdate = now;
                 }

@@ -3,7 +3,6 @@ package com.example.tetrisjavafx;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
 public class View {
     private final GraphicsContext gc;
@@ -22,7 +21,7 @@ public class View {
         gc.setFill(Color.BLACK);
         gc.fillRect(0, 0, (width + 5) * cellSize, (height + 2) * cellSize);
 
-        // Рисуем серую рамку по периметру
+        // Draw gray border
         for (int y = 0; y < height + 2; y++) {
             for (int x = 0; x < width + 2; x++) {
                 if (x == 0 || x == width + 1 || y == 0 || y == height + 1) {
@@ -31,7 +30,7 @@ public class View {
             }
         }
 
-        // Рисуем игровое поле
+        // Draw the playing board
         for (int y = 0; y < boardColors.length; y++) {
             for (int x = 0; x < boardColors[y].length; x++) {
                 if (boardColors[y][x] != Color.BLACK) {
@@ -40,7 +39,7 @@ public class View {
             }
         }
 
-        // Рисуем линии сетки
+        // Draw line grid
         gc.setStroke(Color.GRAY);
         gc.setLineWidth(1);
         for (int i = 0; i <= width; i++) {
@@ -50,7 +49,7 @@ public class View {
             gc.strokeLine(0, i * cellSize, (width + 1) * cellSize, i * cellSize); // Горизонтальные линии
         }
 
-        // Рисуем текущую фигуру
+        // Draw the current piece
         for (int y = 0; y < piece.length; y++) {
             for (int x = 0; x < piece[y].length; x++) {
                 if (piece[y][x] != ' ') {
@@ -78,43 +77,43 @@ public class View {
 
     public void renderNextPiece(char[][] nextPiece, Color nextPieceColor) {
         gc.setFill(Color.WHITE);
-        gc.fillText("Next", (width + 3) * cellSize, 2 * cellSize); // Отображаем текст "Next:"
+        gc.fillText("Next", (width + 3) * cellSize, 2 * cellSize); // Displaying the text "Next:"
 
         for (int y = 0; y < nextPiece.length; y++) {
             for (int x = 0; x < nextPiece[y].length; x++) {
                 if (nextPiece[y][x] != ' ') {
-                    drawCell(width + 3 + x, 3 + y, nextPieceColor); // Рисуем фигуру справа от поля
+                    drawCell(width + 3 + x, 3 + y, nextPieceColor); // Draw a shape to the right of the field
                 }
             }
         }
     }
-
     public void renderScore(int score) {
         gc.setFill(Color.WHITE);
         Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/Pixel Emulator.otf"), 20);
         gc.setFont(pixelFont);
-        gc.fillText("Score", (width + 3) * cellSize, 6 * cellSize + 5); // Заголовок "Score"
+        gc.fillText("Score", (width + 3) * cellSize, 6 * cellSize + 5); // The title "Score"
 
-        gc.fillText(String.valueOf(score), (width + 3) * cellSize, 7 * cellSize - 4); // Текущее значение очков
+        gc.fillText(String.valueOf(score), (width + 3) * cellSize, 7 * cellSize - 4); // Current score
     }
+    public void renderLevel(int level) {
+        gc.setFill(Color.WHITE);
+        Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/Pixel Emulator.otf"), 20);
+        gc.setFont(pixelFont);
+        gc.fillText("Level", (width + 3) * cellSize, 8 * cellSize + 5); // The title "Level"
 
+        gc.fillText(String.valueOf(level), (width + 3) * cellSize, 9 * cellSize - 4); // Current level
+    }
     public void renderTimer(String time) {
         gc.setFill(Color.WHITE);
         Font pixelFont = Font.loadFont(getClass().getResourceAsStream("/font/Pixel Emulator.otf"), 20);
         gc.setFont(pixelFont);
-
-        // Отображаем текст "Time"
-        gc.fillText("Time", (width + 3) * cellSize, 8 * cellSize + 10);
-
-        // Отображаем значение времени
-        gc.fillText(time, (width + 3) * cellSize, 9 * cellSize + 10);
+        gc.fillText("Time", (width + 3) * cellSize, 10 * cellSize + 10); // Displaying the inscription "Time"
+        gc.fillText(time, (width + 3) * cellSize, 11 * cellSize + 10); // Current time
     }
 
     public void clearSidebar() {
-        // Очистка области справа от игрового поля
+        // Clearing the area to the right of the playing field
         gc.setFill(Color.BLACK);
         gc.fillRect((width + 2) * cellSize, 0, 6 * cellSize, (height + 2) * cellSize);
     }
-
-
 }

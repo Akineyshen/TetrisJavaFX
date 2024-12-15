@@ -15,58 +15,54 @@ public class Controller {
     public void moveLeft() {
         model.movePieceLeft();
     }
-
     public void moveRight() {
         model.movePieceRight();
     }
-
     public void moveDown() {
         model.movePieceDown();
     }
-
     public void rotate() {
         model.rotatePiece();
     }
 
     public void update() {
         if (model.isGameOver()) {
-            return; // Игра окончена, дальнейшие обновления не требуются
+            return; // If the game is over, do nothing
         }
         model.movePieceDown();
     }
-
     public void render() {
         if (model.isGameOver()) {
             view.renderGameOver();
         } else {
-            view.renderBoard(model.getBoardColors(), model.getCurrentPiece(), model.getPieceX(), model.getPieceY(), model.getCurrentPieceColor());
-            view.clearSidebar(); // Очищаем боковую панель
+            view.renderBoard(model.getBoard(), model.getCurrentPiece(), model.getPieceX(), model.getPieceY(), model.getCurrentPieceColor());
+            view.clearSidebar();
             view.renderNextPiece(model.getNextPiece(), model.getNextPieceColor());
             view.renderScore(model.getScore());
+            view.renderLevel(model.getLevel());
             view.renderTimer(model.getTime());
         }
     }
 
 
     public void resetGame() {
-        model.resetBoard(); // Очистить игровое поле
-        model.spawnPiece(); // Создать новую фигуру
-        model.resetScore();
-        model.startTimer();
-        model.gameOver = false; // Сбросить флаг окончания игры
-        render(); // Обновить отображение
+        model.resetBoard(); // Clear the board
+        model.spawnPiece(); // Spawn a new piece
+        model.resetScore(); // Reset the score and level
+        model.startTimer(); // Start the timer
+        model.gameOver = false; // Set game over to false
+        render(); // Render the game
     }
-
     public void handleKeyPress(KeyEvent event) {
         if (model.isGameOver()) {
-            // Если игра окончена, проверяем только нажатие SPACE для рестарта
+            // If the game is over, reset the game when the space key is pressed
             if (event.getCode() == KeyCode.SPACE) {
                 resetGame();
             }
             return;
         }
 
-        // Обработка ввода во время игры
+        // Handle key presses
         switch (event.getCode()) {
             case LEFT -> moveLeft();
             case RIGHT -> moveRight();
@@ -74,6 +70,4 @@ public class Controller {
             case UP -> rotate();
         }
     }
-
-
 }
