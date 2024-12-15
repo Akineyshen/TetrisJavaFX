@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebc3a776-92c8-44bd-8ff9-567868ecb6d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/tetrisjavafx/ModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/gameOver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/tetris.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/Tetris.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tetrisjavafx/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +72,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Politechnika Bialostocka\KCK\TetrisJavaFX\screenshots" />
       <recent name="E:\Politechnika Bialostocka\KCK\TetrisJavaFX\src\main\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -85,7 +82,7 @@
       <recent name="com.example.tetrisjavafx" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ModelTest">
+  <component name="RunManager" selected="Application.Tetris">
     <configuration name="Tetris" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tetrisjavafx.Tetris" />
       <module name="TetrisJavaFX" />
@@ -116,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="Application.Tetris" />
+        <item itemvalue="JUnit.ModelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +138,7 @@
       <workItem from="1734201943498" duration="1346000" />
       <workItem from="1734216156097" duration="473000" />
       <workItem from="1734271761488" duration="302000" />
-      <workItem from="1734272074805" duration="7120000" />
+      <workItem from="1734272074805" duration="9236000" />
     </task>
     <task id="LOCAL-00001" summary="Add Font and Timer">
       <option name="closed" value="true" />
@@ -159,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734053192423</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Final Version">
+      <option name="closed" value="true" />
+      <created>1734297388879</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734297388879</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Font and Timer" />
     <MESSAGE value="Version Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Final" />
+    <MESSAGE value="Final Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Version" />
   </component>
 </project>
