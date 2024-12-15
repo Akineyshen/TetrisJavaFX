@@ -65,5 +65,5 @@ Aby uruchomić grę, należy mieć zainstalowaną Javę i środowisko uruchomien
 ### 6.2. Kroki:
 Sklonuj repozytorium:
     ```
-    git clone https://github.com/Akineyshen/TetrisJavaFX.git
+    git clone https://github.com/Akineyshen/TetrisJavaFX
     ```
