@@ -1,4 +1,9 @@
 # Tetris JavaFX
+![Language](https://img.shields.io/badge/Language-Java-brightgreen?style=for-the-badge&logo=mingww64&logoColor=F0931C&color=F0931C&labelColor=FCFCFC)
+![Library](https://img.shields.io/badge/Library-JavaFX-brightgreen?style=for-the-badge&logo=librarything&logoColor=F0931C&color=F0931C&labelColor=FCFCFC)
+![Size](https://img.shields.io/github/repo-size/Akineyshen/TetrisJavaFX?label=Size&style=for-the-badge&color=F0931C&labelColor=FCFCFC)
+![Last Commit](https://img.shields.io/github/last-commit/Akineyshen/TetrisJavaFX?label=Last%20Commit&style=for-the-badge&color=F0931C&labelColor=FCFCFC)
+![Progress](https://img.shields.io/badge/Progress-Completed-brightgreen?style=for-the-badge&color=2FBE7C&labelColor=FCFCFC)
 
 ## Features
 - **Keyboard Controls**: Move and rotate Tetris blocks using arrow keys.
