@@ -67,6 +67,6 @@
 
 ## Screenshots
 
-<img src="https://i.imgur.com/E0GX4yl.png" alt="Tetris">
+<img src="https://i.imgur.com/E0GX4yl.png" alt="TetrisGame">
 
 <img src="https://i.imgur.com/LzyMvKG.png" alt="GameOver">
